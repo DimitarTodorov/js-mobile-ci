@@ -101,7 +101,7 @@
     },
     "android28.sauceLab": {
         "platformName": "Android",
-        "platformVersion": "28",
+        "platformVersion": "9.0",
         "deviceName": "Android GoogleAPI Emulator",
         "avd": "Android GoogleAPI Emulator",
         "lt": 60000,
@@ -109,7 +109,8 @@
         "noReset": true,
         "fullReset": false,
         "app": "",
-        "idleTimeout": 120
+        "idleTimeout": 120,
+        "appiumVersion": "1.13.0"
     },
     "sim.iPhone7": {
         "platformName": "iOS",
