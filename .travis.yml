@@ -4,10 +4,10 @@ branches:
 env:
   global:
     - ANDROID_PACKAGE="demo-$TRAVIS_BUILD_ID.apk"
-    - ANDROID_PACKAGE_FOLDER=$TRAVIS_BUILD_DIR/JsMobileCI/outputs
+    - ANDROID_PACKAGE_FOLDER=$TRAVIS_BUILD_DIR/demo/outputs
     - SAUCE_STORAGE="https://saucelabs.com/rest/v1/storage/$SAUCE_USER"
     - IOS_PACKAGE="demo-$TRAVIS_BUILD_ID.zip"
-    - IOS_PACKAGE_FOLDER=$TRAVIS_BUILD_DIR/JsMobileCI/outputs
+    - IOS_PACKAGE_FOLDER=$TRAVIS_BUILD_DIR/demo/outputs
 
 matrix:
   include:
