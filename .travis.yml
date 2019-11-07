@@ -53,6 +53,14 @@ matrix:
       script:
         - npm i -g appium
         - npm i && travis_wait travis_retry npm run e2e -- --runType sim.iPhoneX --sauceLab --appPath $IOS_PACKAGE
+    - os: linux
+      env:
+        - Type="iOS 13 Tests"
+      language: node_js
+      node_js: "10"
+      script:
+        - npm i -g appium
+        - npm i && travis_wait travis_retry npm run e2e -- --runType sim.iPhoneX.iOS13 --sauceLab --appPath $IOS_PACKAGE
 
 android:
   components:
