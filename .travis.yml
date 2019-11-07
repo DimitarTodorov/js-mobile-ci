@@ -20,7 +20,7 @@ matrix:
       node_js: "10"
       jdk: oraclejdk8
       before_script: 
-        - pod install
+        - sudo pod install
         - pod repo update
       script:
         - cd ./demo
