@@ -19,7 +19,9 @@ matrix:
       language: node_js
       node_js: "10"
       jdk: oraclejdk8
-      before_script: pod repo update
+      before_script: 
+        - pod install
+        - pod repo update
       script:
         - cd ./demo
         - npm i && tns build ios --copy-to "./outputs/demo.app"
