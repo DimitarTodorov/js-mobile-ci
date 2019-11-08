@@ -17,11 +17,11 @@ matrix:
         - Type="iOS Build"
       osx_image: xcode11.2
       language: node_js
-      rvm: 1.9.3
       node_js: "10"
       jdk: oraclejdk8
       before_script:
-        - pod repo update
+        - sudo gem install cocoapods
+        - pod install --repo-update
       script:
         - cd ./demo
         - npm i && tns build ios --copy-to "./outputs/demo.app"
