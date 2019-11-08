@@ -21,9 +21,9 @@ matrix:
       jdk: oraclejdk8
       before_script:
         - sudo gem install cocoapods
+        - cd ./demo
         - pod install --repo-update
       script:
-        - cd ./demo
         - npm i && tns build ios --copy-to "./outputs/demo.app"
         - cd $IOS_PACKAGE_FOLDER && zip -r $IOS_PACKAGE demo.app
         - "curl -u $SAUCE_USER:$SAUCE_KEY -X POST -H 'Content-Type: application/octet-stream' $SAUCE_STORAGE/$IOS_PACKAGE?overwrite=true --data-binary @$IOS_PACKAGE_FOLDER/$IOS_PACKAGE"
