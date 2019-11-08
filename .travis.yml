@@ -20,9 +20,9 @@ matrix:
       node_js: "10"
       jdk: oraclejdk8
       before_script: 
-        - sudo gem install cocoapods
-        - sudo pod install
-        - sudo pod repo update
+        - sudo gem install -n /usr/local/bin cocoapods
+        - pod install
+        - pod repo update
       script:
         - cd ./demo
         - npm i && tns build ios --copy-to "./outputs/demo.app"
