@@ -15,11 +15,10 @@ matrix:
       os: osx
       env:
         - Type="iOS Build"
-      osx_image: xcode10.2
+      osx_image: xcode11.2
       language: node_js
       node_js: "10"
       jdk: oraclejdk8
-      before_script: pod repo update
       script:
         - cd ./demo
         - npm i && tns build ios --copy-to "./outputs/demo.app"
@@ -53,6 +52,14 @@ matrix:
       script:
         - npm i -g appium
         - npm i && travis_wait travis_retry npm run e2e -- --runType sim.iPhoneX --sauceLab --appPath $IOS_PACKAGE
+    - os: linux
+      env:
+        - Type="iOS 13 Tests"
+      language: node_js
+      node_js: "10"
+      script:
+        - npm i -g appium
+        - npm i && travis_wait travis_retry npm run e2e -- --runType sim.iPhoneX.iOS13 --sauceLab --appPath $IOS_PACKAGE
 
 android:
   components:

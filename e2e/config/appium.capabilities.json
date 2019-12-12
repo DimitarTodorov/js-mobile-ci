@@ -131,9 +131,16 @@
         "fullReset": false,
         "app": "",
         "appiumVersion": "1.13.0",
-        "density": 3,
-        "offsetPixels": 87,
         "idleTimeout": 120
+    },
+    "sim.iPhoneX.iOS13": {
+        "platformName": "iOS",
+        "platformVersion": "13.0",
+        "deviceName": "iPhone X",
+        "noReset": false,
+        "fullReset": false,
+        "app": "",
+        "appiumVersion": "1.15.0"
     },
     "sim.iPhoneXS": {
         "platformName": "ios",
